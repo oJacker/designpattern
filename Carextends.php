@@ -1,0 +1,27 @@
+<?php
+
+class  Car{
+    public $name;
+    public function run(){
+        return "在行驶中";
+    }
+}
+
+class Bus extends  Car{
+    public function __construct(){
+        $this->name = "公交车";
+    }
+}
+
+class Taxi extends Car{
+    
+    public function  __construct(){
+        
+        $this->name = "出租车";
+    }
+    
+}
+
+$line =new Bus();
+
+echo $line->name.$line->run();
